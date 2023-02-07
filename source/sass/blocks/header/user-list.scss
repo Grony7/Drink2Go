@@ -1,0 +1,26 @@
+@use "../../global/forwarded.scss" as f;
+
+.user-list {
+  display: flex;
+}
+
+.user-list__button {
+  display: block;
+  min-width: 60px;
+  min-height: 60px;
+  position: relative;
+}
+
+.user-list__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.user-list__text {
+  @media (max-width: f.$mobile-width-only) {
+    @include f.visually-hidden;
+  }
+}

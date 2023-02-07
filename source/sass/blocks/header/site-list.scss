@@ -1,0 +1,26 @@
+@use "../../global/forwarded.scss" as f;
+
+.site-list {
+  display: flex;
+  width: 100vw;
+  background-color: f.$color-background-first;
+  flex-direction: column;
+  border-top: 1px solid #F0EBFF;
+}
+
+.site-list__button {
+  @include f.link-reset;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  width: 100%;
+  min-height: 57px;
+  border-bottom: 1px solid #F0EBFF;
+  background-color: f.$color-background-first;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+}

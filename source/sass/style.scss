@@ -1,7 +1,11 @@
 /* GLOBAL */
-@import "global/forwarded";
 @import "global/global";
 @import "global/fonts";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/header/main-header";
+@import "blocks/header/main-nav";
+@import "blocks/header/user-list";
+@import "blocks/header/site-list";
+
+@import "blocks/main/main-container";

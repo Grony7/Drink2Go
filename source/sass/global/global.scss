@@ -1,8 +1,12 @@
 @use "./forwarded.scss" as f;
 
+* {
+  box-sizing: border-box;
+}
+
 .page {
   height: 100%;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 .page__body {
@@ -23,6 +27,7 @@
 .visually-hidden {
   @include f.visually-hidden;
 }
+
 
 .button {
   display: block;

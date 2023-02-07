@@ -1,0 +1,95 @@
+@use "../../global/forwarded.scss" as f;
+
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav__list {
+  @include f.list-reset;
+}
+
+.main-nav--closed {
+  & .site-list {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: f.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 1px;
+  background-color: f.$color-text-first;
+  box-shadow: 0 6px 0 0 f.$color-text-first, 0 -6px 0 0 f.$color-text-first;
+  transform: translate(-50%, -50%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 22px;
+    width: 16px;
+    height: 1px;
+    background-color: f.$color-text-first;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: f.$mobile-width-only) {
+  .main-nav--opened .site-list {
+    position: absolute;
+    top: 59px;
+    right: 0;
+    z-index: 1;
+
+  }
+  .main-nav--nojs {
+    flex-direction: column-reverse;
+
+    & .user-list {
+      margin-left: auto;
+    }
+
+    & .main-nav__toggle {
+      display: none;
+    }
+
+    & .site-list {
+      width: 200px;
+      display: block;
+      position: relative;
+      margin-top: 60px;
+      left: 0;
+    }
+  }
+
+
+}
