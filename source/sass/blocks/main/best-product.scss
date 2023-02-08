@@ -1,8 +1,6 @@
 @use "../../global/forwarded.scss" as f;
 
 .best-product {
-  width: 320px;
-
   &--decaf {
     background-color: #f3ebe1;
   }
@@ -37,7 +35,6 @@
 .best-product__tag {
   order: -1;
   display: block;
-  width: 74px;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -48,10 +45,13 @@
   margin: 0 auto 4px;
 }
 
-.best-product__image {
+.best-product__image-wrapper {
   order: -2;
-  display: block;
   margin: 0 auto 10px;
+}
+
+.best-product__image {
+  display: block;
 }
 
 .best-product__description {
@@ -89,4 +89,116 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+@media (min-width: f.$tablet-width) {
+  .best-product__wrapper {
+    width: f.$tablet-width;
+    min-height: 640px;
+    padding: 60px 80px 0;
+  }
+
+  .best-product__image-wrapper {
+    order: 1;
+    margin: 0 auto -188px;
+  }
+
+  .best-product__title {
+    font-size: 56px;
+    line-height: 80px;
+    margin: 0 auto 16px;
+  }
+
+  .best-product__tag {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .best-product__description {
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0 auto 20px;
+
+  }
+
+  .best-product__price-wrapper {
+    margin-bottom: 20px;
+  }
+
+
+  .best-product__image {
+    width: 476px;
+    height: 476px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: f.$tablet-width) and (max-width: f.$tablet-width-only) {
+  .best-product__bottom-panel {
+    height: 188px;
+    width: 100%;
+    background-color: f.$color-background-first;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .best-product__wrapper {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 605px 1fr;
+    grid-template-rows: 1fr repeat(4, auto) 1fr;
+    grid-template-areas:
+      "image ."
+      "image tag"
+      "image title"
+      "image description"
+      "image price"
+      "image .";
+
+    width: f.$desktop-width;
+    min-height: 714px;
+    padding: 30px 100px 84px;
+  }
+
+  .best-product__image-wrapper {
+    margin: 0 0 0 5px;
+    grid-area: image;
+  }
+
+  .best-product__image {
+    width: 600px;
+    height: 600px;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .best-product__tag {
+    grid-area: tag;
+    margin: 0 auto 4px 0;
+    text-align: left;
+  }
+
+  .best-product__title {
+    margin: 0 auto 16px 0;
+    grid-area: title;
+    text-align: left;
+  }
+
+  .best-product__description {
+    margin: 0 auto 40px;
+    grid-area: description;
+    text-align: left;
+  }
+
+  .best-product__price-wrapper {
+    grid-area: price;
+    margin: 0 auto 8px 0;
+  }
+}
+
+
+
+
+
+
+
 

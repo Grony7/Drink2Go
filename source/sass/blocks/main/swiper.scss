@@ -1,7 +1,7 @@
 @use "../../global/forwarded.scss" as f;
 
 .swiper {
-  width: 100vw;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -67,6 +67,67 @@
   transform: rotate(180deg) translate(50%, 50%);
 }
 
-.swiper__pagination {
+.swiper__pagination-wrapper {
   display: none;
+}
+
+@media (min-width: f.$tablet-width) {
+  .swiper__button {
+    top: 300px;
+
+    &--prev {
+      left: calc(50% - 344px);
+    }
+
+    &--next {
+      left: calc(50% + 344px);
+    }
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .swiper__button {
+    top: 336px;
+
+    &--prev {
+      left: calc(50% - 680px);
+    }
+
+    &--next {
+      left: calc(50% + 680px);
+    }
+  }
+
+  .swiper__pagination-wrapper {
+    display: inline-block;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: 1;
+  }
+
+  .swiper__pagination {
+    display: flex;
+    column-gap: 8px;
+    opacity: 1;
+  }
+
+  .swiper__pagination-bullet {
+    background-color: f.$color-background-first;
+    width: 62px;
+    height: 4px;
+    margin: 0;
+    opacity: 1;
+    border-radius: 0;
+    cursor: pointer;
+  }
+
+  .swiper__pagination-bullet--active {
+    background-color: f.$color-accent;
+    margin: 0;
+    opacity: 1;
+  }
+
+
 }

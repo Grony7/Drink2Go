@@ -73,14 +73,18 @@
   <section class="swiper">
     <div class="swiper__list swiper-wrapper">
       <!-- Slides -->
-      <div class="swiper__item best-product best-product--decaf  swiper-slide">
+
+
+      <div class="swiper__item best-product best-product--decaf swiper-slide">
         <div class="best-product__wrapper">
           <h3 class="best-product__title">Декаф Флэт Уайт</h3>
           <span class="best-product__tag">Новинка!</span>
-          <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт"
-               src="img/best-product/decaf/flat.png" srcset="img/best-product/decaf/flat.png, img/best-product/decaf/flat@2x.png 2x">
+          <div class="best-product__image-wrapper">
+            <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт"
+                 src="img/best-product/decaf/flat.png" srcset="img/best-product/decaf/flat.png, img/best-product/decaf/flat@2x.png 2x">
+          </div>
           <p class="best-product__description">
-            Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления
+            Свежесваренный кофе без кофеина из Эфиопии с&nbspнатуральным фермерским молоком — то, что нужно для&nbspрасслабления
             после тяжёлого рабочего дня
           </p>
           <div class="best-product__price-wrapper">
@@ -95,14 +99,17 @@
             </button>
           </div>
         </div>
+        <div class="best-product__bottom-panel"></div>
       </div>
 
       <div class="swiper__item best-product best-product--latte swiper-slide">
         <div class="best-product__wrapper">
           <h3 class="best-product__title">Лавандовый Латте</h3>
           <span class="best-product__tag">Новинка!</span>
-          <img class="best-product__image" width="280" height="280" alt="Лавандовый Латте"
-               src="img/best-product/latte/latte.png" srcset="img/best-product/latte/latte.png, img/best-product/latte/latte@2x.png 2x">
+          <div class="best-product__image-wrapper">
+            <img class="best-product__image" width="280" height="280" alt="Лавандовый Латте"
+                 src="img/best-product/latte/latte.png" srcset="img/best-product/latte/latte.png, img/best-product/latte/latte@2x.png 2x">
+          </div>
           <p class="best-product__description">
             Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
           </p>
@@ -118,14 +125,17 @@
             </button>
           </div>
         </div>
+        <div class="best-product__bottom-panel"></div>
       </div>
 
       <div class="swiper__item best-product best-product--espresso  swiper-slide">
         <div class="best-product__wrapper">
           <h3 class="best-product__title">Тройной Эспрессо</h3>
           <span class="best-product__tag">Новинка!</span>
-          <img class="best-product__image" width="280" height="280" alt="Тройной Эспрессо"
-               src="img/best-product/espresso/espresso.png" srcset="img/best-product/espresso/espresso.png, img/best-product/espresso/espresso@2x.png 2x">
+          <div class="best-product__image-wrapper">
+            <img class="best-product__image" width="280" height="280" alt="Тройной Эспрессо"
+                 src="img/best-product/espresso/espresso.png" srcset="img/best-product/espresso/espresso.png, img/best-product/espresso/espresso@2x.png 2x">
+          </div>
           <p class="best-product__description">
             Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
           </p>
@@ -141,10 +151,13 @@
             </button>
           </div>
         </div>
+        <div class="best-product__bottom-panel"></div>
       </div>
-
     </div>
-    <div class="swiper__pagination"></div>
+    <div class="swiper__pagination-wrapper">
+      <div class="swiper__pagination"></div>
+    </div>
+
 
     <button class="swiper__button swiper__button--prev">
       <span class="visually-hidden">Следущий слайд</span>
@@ -159,7 +172,6 @@
       </svg>
     </button>
 
-    <!--  <div class="swiper-scrollbar"></div>-->
   </section>
 
 </main>

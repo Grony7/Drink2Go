@@ -1,17 +1,20 @@
-export const swiperTopProducts= new Swiper('.swiper', {
+new Swiper('.swiper', {
   loop: true,
   pagination: {
+    bulletClass: 'swiper__pagination-bullet',
+    bulletActiveClass: 'swiper__pagination-bullet--active',
+    horizontalClass: 'swiper__pagination--horizontal',
+    clickableClass: 'swiper__pagination--clickable',
     el: '.swiper__pagination',
+    clickable: true,
+    style: false,
   },
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper__button--next',
     prevEl: '.swiper__button--prev',
   },
   speed: 500,
-  // effect: 'fade',
-  // fadeEffect: {
-  //   crossFade: true,
-  // }
+  autoplay: {
+    delay: 15000,
+  },
 });
