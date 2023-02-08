@@ -20,7 +20,7 @@
   min-width: 40px;
   min-height: 40px;
   position: absolute;
-  top: 300px;
+  top: 310px;
   transform: translateX(-50%);
   z-index: 2;
   outline: none;
@@ -30,15 +30,15 @@
   cursor: pointer;
 
   &--prev {
-    left: calc(50% - 130px);
+    left: calc(50% - 150px);
   }
 
   &--next {
-    left: calc(50% + 130px);
+    left: calc(50% + 150px);
   }
 
   &:hover,
-  &:focus{
+  &:focus-visible {
     background-color: f.$color-accent--hover;
 
     & .swiper__button-icon {
@@ -65,4 +65,8 @@
 
 .swiper__button--next .swiper__button-icon {
   transform: rotate(180deg) translate(50%, 50%);
+}
+
+.swiper__pagination {
+  display: none;
 }

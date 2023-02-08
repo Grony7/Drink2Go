@@ -7,7 +7,7 @@
     width: 100vw;
     background-color: f.$color-background-first;
     flex-direction: column;
-    border-top: 1px solid #F0EBFF;
+    border-top: 1px solid #f0ebff;
   }
 
   .site-list__button {
@@ -18,14 +18,13 @@
     display: block;
     width: 100%;
     min-height: 57px;
-    border-bottom: 1px solid #F0EBFF;
+    border-bottom: 1px solid #f0ebff;
     background-color: f.$color-background-first;
     padding: 20px;
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
-
 }
 
 @media (min-width: f.$tablet-width) {

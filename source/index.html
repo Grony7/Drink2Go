@@ -67,56 +67,102 @@
   </div>
 </header>
 <main class="main-container">
-
-</main>
   <h1 class="visually-hidden">Магазин кофе Drink2Go</h1>
 
-<!-- Slider main container -->
-<section class="swiper">
-  <div class="swiper__list swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper__item best-product best-product--decaf  swiper-slide">
-      <div class="best-product__wrapper">
-        <h3 class="best-product__title">Декаф Флэт Уайт</h3>
-        <span class="best-product__tag">Новинка!</span>
-        <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт" src="img/best-product/flat_white_img.png">
+  <!-- Slider main container -->
+  <section class="swiper">
+    <div class="swiper__list swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper__item best-product best-product--decaf  swiper-slide">
+        <div class="best-product__wrapper">
+          <h3 class="best-product__title">Декаф Флэт Уайт</h3>
+          <span class="best-product__tag">Новинка!</span>
+          <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт"
+               src="img/best-product/decaf/flat.png" srcset="img/best-product/decaf/flat.png, img/best-product/decaf/flat@2x.png 2x">
+          <p class="best-product__description">
+            Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления
+            после тяжёлого рабочего дня
+          </p>
+          <div class="best-product__price-wrapper">
+            <span class="best-product__old-price">
+              295₽
+            </span>
+            <b class="best-product__price">
+              225₽
+            </b>
+            <button class="best-product__button button">
+              Заказать
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="top-products__item best-product best-product--latte  swiper-slide">
-      <div class="best-product__wrapper">
-        <h3 class="best-product__title">Декаф Флэт Уайт</h3>
-        <span class="best-product__tag">Новинка!</span>
-        <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт" src="img/best-product/flat_white_img.png">
+
+      <div class="swiper__item best-product best-product--latte swiper-slide">
+        <div class="best-product__wrapper">
+          <h3 class="best-product__title">Лавандовый Латте</h3>
+          <span class="best-product__tag">Новинка!</span>
+          <img class="best-product__image" width="280" height="280" alt="Лавандовый Латте"
+               src="img/best-product/latte/latte.png" srcset="img/best-product/latte/latte.png, img/best-product/latte/latte@2x.png 2x">>
+          <p class="best-product__description">
+            Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+          </p>
+          <div class="best-product__price-wrapper">
+            <span class="best-product__old-price">
+              285₽
+            </span>
+            <b class="best-product__price">
+              265₽
+            </b>
+            <button class="best-product__button button">
+              Заказать
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="top-products__item best-product best-product--espresso  swiper-slide">
-      <div class="best-product__wrapper">
-        <h3 class="best-product__title">Декаф Флэт Уайт</h3>
-        <span class="best-product__tag">Новинка!</span>
-        <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт" src="img/best-product/flat_white_img.png">
+
+      <div class="swiper__item best-product best-product--espresso  swiper-slide">
+        <div class="best-product__wrapper">
+          <h3 class="best-product__title">Тройной Эспрессо</h3>
+          <span class="best-product__tag">Новинка!</span>
+          <img class="best-product__image" width="280" height="280" alt="Тройной Эспрессо"
+               src="img/best-product/espresso/espresso.png" srcset="img/best-product/espresso/espresso.png, img/best-product/espresso/espresso@2x.png 2x">>
+          <p class="best-product__description">
+            Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+          </p>
+          <div class="best-product__price-wrapper">
+            <span class="best-product__old-price">
+              395₽
+            </span>
+            <b class="best-product__price">
+              375₽
+            </b>
+            <button class="best-product__button button">
+              Заказать
+            </button>
+          </div>
+        </div>
       </div>
+
     </div>
+    <div class="swiper__pagination"></div>
 
+    <button class="swiper__button swiper__button--prev">
+      <span class="visually-hidden">Следущий слайд</span>
+      <svg class="swiper__button-icon" width="20" height="20">
+        <use xlink:href="img/icons/stack.svg#swiper-arrow"></use>
+      </svg>
+    </button>
+    <button class="swiper__button swiper__button--next">
+      <span class="visually-hidden">Предыдущий слайд</span>
+      <svg class="swiper__button-icon" width="20" height="20">
+        <use xlink:href="img/icons/stack.svg#swiper-arrow"></use>
+      </svg>
+    </button>
 
+    <!--  <div class="swiper-scrollbar"></div>-->
+  </section>
 
-  </div>
-<!--  <div class="swiper-pagination"></div>-->
-
-  <button class="swiper__button swiper__button--prev" onclick="event.preventDefault()">
-    <span class="visually-hidden">Следущий слайд</span>
-    <svg class="swiper__button-icon" width="10" height="11">
-      <use xlink:href="img/icons/stack.svg#swiper-arrow" ></use>
-    </svg>
-  </button>
-  <button class="swiper__button swiper__button--next" onclick="event.preventDefault()">
-    <span class="visually-hidden">Предыдущий слайд</span>
-    <svg class="swiper__button-icon" width="10" height="11">
-      <use xlink:href="img/icons/stack.svg#swiper-arrow" ></use>
-    </svg>
-  </button>
-
-<!--  <div class="swiper-scrollbar"></div>-->
-</section>
+</main>
 
 <script src="js/script.js" type="module"></script>
 <script src="vendor/swiper.js"></script>
