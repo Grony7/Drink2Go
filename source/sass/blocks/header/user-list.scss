@@ -20,7 +20,42 @@
 
 
 .user-list__text {
-  @media (max-width: f.$mobile-width-only) {
+  @media (max-width: f.$tablet-width-only) {
     @include f.visually-hidden;
+  }
+}
+
+@media (min-width: f.$tablet-width) {
+  .user-list {
+    margin-left: auto;
+  }
+
+  .user-list__button {
+    min-width: 60px;
+    min-height: 80px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .user-list {
+    column-gap: 20px;
+  }
+
+  .user-list__button {
+    @include f.link-reset;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 32px 20px 32px 44px;
+  }
+
+  .user-list__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: 20px;
   }
 }

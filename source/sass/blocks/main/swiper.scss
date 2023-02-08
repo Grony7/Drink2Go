@@ -1,0 +1,68 @@
+@use "../../global/forwarded.scss" as f;
+
+.swiper {
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
+.swiper__list {
+  position: relative;
+}
+
+.swiper__button {
+  min-width: 40px;
+  min-height: 40px;
+  position: absolute;
+  top: 300px;
+  transform: translateX(-50%);
+  z-index: 2;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &--prev {
+    left: calc(50% - 130px);
+  }
+
+  &--next {
+    left: calc(50% + 130px);
+  }
+
+  &:hover,
+  &:focus{
+    background-color: f.$color-accent--hover;
+
+    & .swiper__button-icon {
+      fill: f.$color-background-first;
+    }
+  }
+
+  &:active {
+    background-color: f.$color-accent--active;
+
+    & .swiper__button-icon {
+      fill: f.$color-background-first;
+    }
+  }
+}
+
+.swiper__button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: f.$color-accent;
+}
+
+.swiper__button--next .swiper__button-icon {
+  transform: rotate(180deg) translate(50%, 50%);
+}

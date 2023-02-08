@@ -15,7 +15,7 @@
 
 .main-header__logo {
   display: block;
-  margin: 12px 0 0 0;
+  padding: 12px 0 0 0;
 }
 
 .main-header__slogan {
@@ -24,5 +24,53 @@
 
 .main-header__main-nav {
   margin-left: auto;
+}
+
+@media (min-width: f.$tablet-width) {
+  .main-header__wrapper {
+    width: f.$tablet-width;
+    padding: 0 20px;
+    min-height: 80px;
+  }
+
+  .main-header__logo {
+    padding-top: 22px;
+
+    & img {
+      display: block;
+      width: 82px;
+      height: 36px;
+    }
+  }
+
+  .main-header__main-nav {
+    margin-left: 66px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .main-header__wrapper {
+    padding: 0 40px;
+    width: f.$desktop-width;
+  }
+
+  .main-header__logo img {
+    width: 170px;
+  }
+
+  .main-header__slogan {
+    display: block;
+    width: 126px;
+    margin-left: 20px;
+    padding-top: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .main-header__main-nav {
+    margin-left: 162px;
+  }
 }
 

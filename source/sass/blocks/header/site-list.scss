@@ -1,26 +1,61 @@
 @use "../../global/forwarded.scss" as f;
 
-.site-list {
-  display: flex;
-  width: 100vw;
-  background-color: f.$color-background-first;
-  flex-direction: column;
-  border-top: 1px solid #F0EBFF;
+
+@media (max-width: f.$mobile-width-only) {
+  .site-list {
+    display: flex;
+    width: 100vw;
+    background-color: f.$color-background-first;
+    flex-direction: column;
+    border-top: 1px solid #F0EBFF;
+  }
+
+  .site-list__button {
+    @include f.link-reset;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+    width: 100%;
+    min-height: 57px;
+    border-bottom: 1px solid #F0EBFF;
+    background-color: f.$color-background-first;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
 }
 
-.site-list__button {
-  @include f.link-reset;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  display: block;
-  width: 100%;
-  min-height: 57px;
-  border-bottom: 1px solid #F0EBFF;
-  background-color: f.$color-background-first;
-  padding: 20px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+@media (min-width: f.$tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .site-list__button {
+    @include f.link-reset;
+    display: block;
+    min-height: 80px;
+    padding: 32px 20px;
+    max-width: 400px;
+    color: f.$color-text-first;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+
+    &--current {
+      padding-bottom: 30px;
+      border-bottom: 2px solid f.$color-accent;
+    }
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .site-list {
+    column-gap: 20px;
+  }
 }

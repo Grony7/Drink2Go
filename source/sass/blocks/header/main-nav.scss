@@ -9,11 +9,6 @@
   @include f.list-reset;
 }
 
-.main-nav--closed {
-  & .site-list {
-    display: none;
-  }
-}
 
 .main-nav__toggle {
   position: relative;
@@ -64,6 +59,12 @@
 }
 
 @media (max-width: f.$mobile-width-only) {
+  .main-nav--closed {
+    & .site-list {
+      display: none;
+    }
+  }
+
   .main-nav--opened .site-list {
     position: absolute;
     top: 59px;
