@@ -10,7 +10,7 @@
 }
 
 @mixin list-reset {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
   margin: 0;
 }
