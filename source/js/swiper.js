@@ -16,5 +16,6 @@ new Swiper('.swiper', {
   speed: 500,
   autoplay: {
     delay: 12000,
+    disableOnInteraction: false,
   },
 });

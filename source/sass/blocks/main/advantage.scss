@@ -1,3 +1,5 @@
+@use "../../global/forwarded.scss" as f;
+
 .advantage__image {
   display: block;
   margin: 0 auto 10px;
@@ -15,4 +17,53 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+}
+
+@media (min-width: f.$tablet-width) {
+  .advantage {
+    width: 339px;
+    position: relative;
+    padding: 0 0 0 72px;
+  }
+
+  .advantage__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+
+  .advantage__title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: start;
+  }
+
+  .advantage__description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .advantage {
+    width: 317px;
+    padding: 0;
+  }
+
+  .advantage__image {
+    position: static;
+    margin: 0 auto 20px;
+  }
+
+  .advantage__title {
+    text-align: center;
+  }
+
+  .advantage__description {
+    text-align: center;
+  }
 }
