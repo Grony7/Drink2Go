@@ -1,0 +1,37 @@
+@use "../../global/forwarded.scss" as f;
+
+.advantages {
+  width: f.$mobile-width;
+  padding: 50px 20px 60px;
+  margin: 0 auto;
+}
+
+.advantages__title {
+  margin: 0 auto 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: f.$color-accent;
+}
+
+.advantages__subtitle {
+  margin: 0 auto 36px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages__list {
+  @include f.list-reset;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.advantages__item {
+  padding: 0;
+}
+
+
