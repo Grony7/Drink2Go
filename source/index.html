@@ -5,7 +5,7 @@
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="vendor/styles.css">
+  <link rel="stylesheet" href="vendor/swiper/styles.css">
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -48,7 +48,8 @@
         <li class="user-list__item">
           <a class="user-list__button " href="#">
             <span class="user-list__text">Войти</span>
-            <svg class="user-list__icon user-list__icon--login" aria-hidden="true" focusable="false" width="18" height="18">
+            <svg class="user-list__icon user-list__icon--login" aria-hidden="true" focusable="false" width="18"
+                 height="18">
               <use xlink:href="img/icons/stack.svg#login"></use>
             </svg>
           </a>
@@ -56,7 +57,8 @@
         <li class="user-list__item">
           <a class="user-list__button " href="#">
             <span class="user-list__text">Корзина</span>
-            <svg class="user-list__icon user-list__icon--login" aria-hidden="true" focusable="false" width="18" height="18">
+            <svg class="user-list__icon user-list__icon--login" aria-hidden="true" focusable="false" width="18"
+                 height="18">
               <use xlink:href="img/icons/stack.svg#cart"></use>
             </svg>
           </a>
@@ -69,11 +71,8 @@
 <main class="main-container">
   <h1 class="visually-hidden">Магазин кофе Drink2Go</h1>
 
-  <!-- Slider main container -->
   <section class="swiper">
     <div class="swiper__list swiper-wrapper">
-      <!-- Slides -->
-
 
       <div class="swiper__item best-product best-product--decaf swiper-slide">
         <div class="best-product__wrapper">
@@ -189,34 +188,66 @@
     </p>
     <ul class="advantages__list">
       <li class="advantages__item advantage">
-        <img class="advantage__image" aria-hidden="true" focusable="false" width="50" height="56" src="img/advantages/watch.svg" alt="Часы">
+        <img class="advantage__image" aria-hidden="true" focusable="false" width="50" height="56"
+             src="img/advantages/watch.svg" alt="Часы">
         <h3 class="advantage__title">Скорость</h3>
         <p class="advantage__description">Готовый напиток всегда под рукой — просто открой банку</p>
       </li>
 
       <li class="advantages__item advantage">
-        <img class="advantage__image" aria-hidden="true" focusable="false" width="52" height="56" src="img/advantages/pocket.svg" alt="Карман">
+        <img class="advantage__image" aria-hidden="true" focusable="false" width="52" height="56"
+             src="img/advantages/pocket.svg" alt="Карман">
         <h3 class="advantage__title">Удобство</h3>
         <p class="advantage__description">Легко помещается и в карман, и&nbspв&nbspмаленькую сумочку</p>
       </li>
 
       <li class="advantages__item advantage">
-        <img class="advantage__image" aria-hidden="true" focusable="false" width="42" height="56" src="img/advantages/energy.svg" alt="Энергия">
+        <img class="advantage__image" aria-hidden="true" focusable="false" width="42" height="56"
+             src="img/advantages/energy.svg" alt="Энергия">
         <h3 class="advantage__title">Бодрость</h3>
         <p class="advantage__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
       </li>
 
       <li class="advantages__item advantage">
-        <img class="advantage__image" aria-hidden="true" focusable="false" width="46" height="56" src="img/advantages/sheet.svg" alt="Лист">
+        <img class="advantage__image" aria-hidden="true" focusable="false" width="46" height="56"
+             src="img/advantages/sheet.svg" alt="Лист">
         <h3 class="advantage__title">Экологичность</h3>
         <p class="advantage__description">Вся упаковка сделана из&nbspперерабатываемых материалов</p>
       </li>
     </ul>
   </section>
 
+  <section class="catalog">
+
+    <h2 class="catalog__title">Каталог</h2>
+    <p class="catalog__subtitle">Каталог кофейных напитков</p>
+    <form class="catalog__filters filters">
+      <div class="filters__price price">
+        <h3 class="price__title">Цена</h3>
+        <div class="price__slider--wrapper">
+          <div class="price__slider slider"></div>
+        </div>
+
+
+        <div class="price__wrapper">
+          <label class="price__input-label price__input-label--min">
+            <input class="price__input price__input--min" type="number" placeholder="0">
+          </label>
+          <span class="price__dash">-</span>
+          <label class="price__input-label price__input-label--max">
+            <input class="price__input price__input--max" type="number" placeholder="900">
+          </label>
+        </div>
+
+      </div>
+    </form>
+
+  </section>
+
 </main>
 
 <script src="js/script.js" type="module"></script>
-<script src="vendor/swiper.js"></script>
+<script src="vendor/swiper/swiper.js"></script>
+<script src="vendor/nouislider/nouislider.js"></script>
 </body>
 </html>

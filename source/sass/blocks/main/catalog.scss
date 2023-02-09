@@ -1,0 +1,25 @@
+@use "../../global/forwarded.scss" as f;
+
+.catalog {
+  width: f.$mobile-width;
+  padding: 50px 20px 44px;
+  margin: 0 auto;
+}
+
+.catalog__title {
+  margin: 0 auto 4px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: f.$color-accent;
+  letter-spacing: 0.04em;
+}
+
+.catalog__subtitle {
+  margin: 0 auto 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
