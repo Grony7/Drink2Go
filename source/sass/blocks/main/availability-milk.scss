@@ -1,0 +1,91 @@
+@use "../../global/forwarded.scss" as f;
+
+.availability-milk {
+  @include f.fieldset-reset;
+  padding: 0 0 21px;
+}
+
+.availability-milk__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 22px;
+}
+
+.availability-milk__list {
+  @include f.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.availability-milk__item {
+  padding: 0;
+  margin: 0;
+}
+
+.availability-milk__control {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.availability-milk__mark {
+  position: relative;
+  display: block;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid f.$color-accent;
+  background-color: f.$color-background-first;
+}
+
+.availability-milk__mark::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: f.$color-accent;
+  transition: width 300ms, height 300ms;
+  transform: translate(-50%, -50%);
+}
+
+.availability-milk__input:checked + .availability-milk__mark::after {
+  content: " ";
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+}
+
+.availability-milk__label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (min-width: f.$tablet-width) {
+  .availability-milk {
+    margin-right: 38px;
+  }
+
+  .availability-milk__title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .availability-milk {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .availability-milk__list {
+    gap: 20px;
+  }
+}

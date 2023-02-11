@@ -1,0 +1,99 @@
+@use "../../global/forwarded.scss" as f;
+
+.country-origin {
+  @include f.fieldset-reset;
+  padding: 0 0 34px;
+}
+
+.country-origin__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 21px
+}
+
+.country-origin__list {
+  @include f.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.country-origin__item {
+  padding: 0;
+  margin: 0;
+}
+
+.country-origin__control {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.country-origin__mark {
+  position: relative;
+  display: block;
+  margin-right: 10px;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #BDBDBD;
+  transition: 300ms;
+}
+
+.country-origin__label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.country-origin__input:checked {
+  & + .country-origin__mark {
+    background-color: f.$color-accent;
+  }
+
+  & + .country-origin__mark::after {
+    background-color: f.$color-background-first;
+    left: 20px;
+  }
+}
+
+.country-origin__input + .country-origin__mark::after {
+  content: " ";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: f.$color-background-first;
+  transition: 300ms;
+}
+
+.country-origin__input:disabled {
+  + .country-origin__mark {
+    background-color: #E2E2E2;
+  }
+
+  & + .country-origin__mark::after {
+    background-color: #F8F8F8;
+  }
+
+  & ~ .country-origin__label {
+    color: #BDBDBD;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .country-origin {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .country-origin__list {
+    gap: 20px;
+  }
+}
+

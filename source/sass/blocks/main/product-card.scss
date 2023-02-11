@@ -1,0 +1,78 @@
+@use "../../global/forwarded.scss" as f;
+
+.product-card {
+  padding: 40px 20px 20px;
+  background-color: f.$color-background-first;
+  border-radius: 4px;
+}
+
+.product-card__image {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.product-card__title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.product-card__description {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.product-card__price-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.product-card__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.product-card__button {
+  position: relative;
+  padding-left: 46px;
+  margin: 0 0 0 auto;
+  line-height: 20px;
+}
+
+.product-card__button-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+@media (min-width: f.$tablet-width) {
+  .product-card {
+    width: 349px;
+    padding: 50px 30px 30px;
+  }
+
+  .product-card__image {
+    margin-bottom: 30px;
+  }
+
+  .product-card__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  .product-card__description {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .product-card {
+    width: 317px;
+  }
+}

@@ -19,3 +19,9 @@
   text-decoration: none;
   color: inherit;
 }
+
+@mixin fieldset-reset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}

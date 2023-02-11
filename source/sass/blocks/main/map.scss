@@ -1,0 +1,17 @@
+@use "../../global/forwarded.scss" as f;
+
+.map__canvas {
+  width: 100%;
+  min-height: 420px;
+
+  @media (min-width: f.$tablet-width) {
+    min-height: 480px;
+  }
+
+  @media (min-width: f.$desktop-width) {
+    min-height: 540px;
+  }
+}
+
+
+
