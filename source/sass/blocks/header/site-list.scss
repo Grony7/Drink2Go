@@ -35,7 +35,12 @@
     user-select: none;
 
     &:active {
+
       background-color: #f0ebff;
+
+      -webkit-tap-highlight-color: #f0ebff;
+
+      color: f.$color-text-first;
     }
   }
 }
@@ -75,9 +80,6 @@
       border-bottom: 2px solid f.$color-accent;
     }
 
-
-
-
     &:hover,
     &:focus-visible {
       color: f.$color-accent;
@@ -85,6 +87,10 @@
 
     &:active {
       background-color: #f0ebff;
+
+      -webkit-tap-highlight-color: #f0ebff;
+
+      color: f.$color-text-first;
     }
   }
 }
