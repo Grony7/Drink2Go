@@ -18,6 +18,19 @@
 
 .main-footer__logo {
   margin: 0;
+
+  opacity: 1;
+
+  outline: none;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .main-footer__logo img {

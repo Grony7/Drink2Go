@@ -11,6 +11,12 @@
 
   min-width: 60px;
   min-height: 60px;
+
+  tap-highlight-color: transparent;
+
+  &:active {
+    background-color: #f0ebff;
+  }
 }
 
 .user-list__icon {
@@ -19,6 +25,8 @@
   left: 50%;
 
   transform: translate(-50%, -50%);
+
+  fill: #333333;
 }
 
 
@@ -55,6 +63,25 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
+
+    &:hover,
+    &:focus-visible {
+      color: f.$color-accent;
+
+      & .user-list__icon {
+        fill: f.$color-accent;
+      }
+    }
+
+    &:active {
+      color: f.$color-accent;
+
+      background-color: #f0ebff;
+
+      & .user-list__icon {
+        fill: f.$color-accent;
+      }
+    }
   }
 
   .user-list__icon {
