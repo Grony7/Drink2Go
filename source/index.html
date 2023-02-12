@@ -234,10 +234,12 @@
 
           <div class="price__wrapper">
             <label class="price__input-label price__input-label--min">
-              <input class="price__input price__input--min" type="number" placeholder="0" min="0" max="1000">
+              <input class="price__input price__input--min" type="number" name="min-price" placeholder="0" min="0"
+                     max="1000">
             </label>
             <label class="price__input-label price__input-label--max">
-              <input class="price__input price__input--max" type="number" placeholder="900" min="0" max="1000">
+              <input class="price__input price__input--max" type="number" name="max-price" placeholder="900" min="0"
+                     max="1000">
             </label>
           </div>
         </fieldset>
@@ -248,28 +250,32 @@
           <ul class="availability-milk__list">
             <li class="availability-milk__item">
               <label class="availability-milk__control">
-                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk" checked>
+                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk"
+                       value="no-matter" checked>
                 <span class="availability-milk__mark"></span>
                 <span class="availability-milk__label">Неважно</span>
               </label>
             </li>
             <li class="availability-milk__item">
               <label class="availability-milk__control">
-                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk">
+                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk"
+                       value="only-animal">
                 <span class="availability-milk__mark"></span>
                 <span class="availability-milk__label">Только животное</span>
               </label>
             </li>
             <li class="availability-milk__item">
               <label class="availability-milk__control">
-                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk">
+                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk"
+                       value="only-vegetable">
                 <span class="availability-milk__mark"></span>
                 <span class="availability-milk__label">Только растительное</span>
               </label>
             </li>
             <li class="availability-milk__item">
               <label class="availability-milk__control">
-                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk">
+                <input class="availability-milk__input visually-hidden" type="radio" name="availability-milk"
+                       value="without-milk" disabled>
                 <span class="availability-milk__mark"></span>
                 <span class="availability-milk__label">Без молока</span>
               </label>
@@ -284,35 +290,40 @@
           <ul class="country-origin__list">
             <li class="country-origin__item">
               <label class="country-origin__control">
-                <input class="country-origin__input visually-hidden" type="checkbox" name="country-origin" checked>
+                <input class="country-origin__input visually-hidden" type="checkbox" value="Brazil"
+                       name="country-origin" checked>
                 <span class="country-origin__mark"></span>
                 <span class="country-origin__label">Бразилия</span>
               </label>
             </li>
             <li class="country-origin__item">
               <label class="country-origin__control">
-                <input class="country-origin__input visually-hidden" type="checkbox" name="country-origin">
+                <input class="country-origin__input visually-hidden" type="checkbox" value="Ethiopia"
+                       name="country-origin">
                 <span class="country-origin__mark"></span>
                 <span class="country-origin__label">Эфиопия</span>
               </label>
             </li>
             <li class="country-origin__item">
               <label class="country-origin__control">
-                <input class="country-origin__input visually-hidden" type="checkbox" name="country-origin">
+                <input class="country-origin__input visually-hidden" type="checkbox" value="Colombia"
+                       name="country-origin">
                 <span class="country-origin__mark"></span>
                 <span class="country-origin__label">Колумбия</span>
               </label>
             </li>
             <li class="country-origin__item">
               <label class="country-origin__control">
-                <input class="country-origin__input visually-hidden" type="checkbox" name="country-origin">
+                <input class="country-origin__input visually-hidden" type="checkbox" value="Costa-Rica"
+                       name="country-origin">
                 <span class="country-origin__mark"></span>
                 <span class="country-origin__label">Коста-Рика</span>
               </label>
             </li>
             <li class="country-origin__item">
               <label class="country-origin__control">
-                <input class="country-origin__input visually-hidden" type="checkbox" name="country-origin" disabled>
+                <input class="country-origin__input visually-hidden" type="checkbox" value="Peru" name="country-origin"
+                       disabled>
                 <span class="country-origin__mark"></span>
                 <span class="country-origin__label">Перу</span>
               </label>
@@ -331,12 +342,19 @@
       <div class="catalog__sort sort">
         <label class="sort__label">
           <span class="sort__title">Сортировка:</span>
-          <select class="sort__select" form="filters">
-            <option>по умолчанию</option>
-            <option>сначала дорогие</option>
-            <option>сначала дешёвые</option>
-            <option>высокий рейтинг</option>
-          </select>
+          <span class="sort__wrapper">
+            <select class="sort__select" name="sort" form="filters">
+              <option class="sort__option" name="sort" value="default">по умолчанию</option>
+              <option class="sort__option" name="sort" value="dear-ones-first">сначала дорогие</option>
+              <option class="sort__option" name="sort" value="cheap-ones-first">сначала дешёвые</option>
+              <option class="sort__option" name="sort" value="high-rating">высокий рейтинг</option>
+            </select>
+
+            <svg class="sort__select-icon" width="10" height="10">
+              <use xlink:href="img/icons/stack.svg#arrow-select"></use>
+            </svg>
+          </span>
+
         </label>
       </div>
 
@@ -640,8 +658,7 @@
     <div class="main-footer__dividin-line"></div>
 
     <div class="main-footer__HTML-academy HTML-academy">
-      <dev class="HTML-academy__wrapper">
-
+      <div class="HTML-academy__wrapper">
         Разработано в&nbsp
         <a class="HTML-academy__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
@@ -650,7 +667,7 @@
             <use xlink:href="img/icons/stack.svg#html-logo"></use>
           </svg>
         </a>
-      </dev>
+      </div>
     </div>
   </div>
 

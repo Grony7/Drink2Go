@@ -15,6 +15,10 @@
   line-height: 24px;
 }
 
+.sort__wrapper {
+  position: relative;
+}
+
 .sort__select {
   position: relative;
 
@@ -25,17 +29,40 @@
 
   color: f.$color-accent;
   border: none;
+  border-radius: 4px;
   outline: none;
   background-color: transparent;
-  background-image: url("../../../img/arrow-select.svg");
-  background-repeat: no-repeat;
-  background-position: top 11px right 10px;
 
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   appearance: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #f0ebff;
+  }
+
+  .sort__option {
+    background-color: f.$color-background-first;
+    padding: 8px 20px;
+    display: block;
+    border: none;
+  }
+
+
+  &:active ~ .sort__select-icon {
+    transform-origin: center;
+    transform: rotate(180deg);
+  }
+}
+
+.sort__select-icon {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  transition: 300ms;
 }
 
 @media (min-width: f.$tablet-width) {

@@ -55,6 +55,24 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  outline: none;
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+
+  &:focus-visible {
+    border-color: #593cac;
+  }
+
+  &:disabled {
+    border-color: #e2e2e2;
+    background-color: #f8f8f8;
+
+    &::placeholder {
+      color: #bdbdbd;
+    }
+  }
 }
 
 @media (min-width: f.$tablet-width) {

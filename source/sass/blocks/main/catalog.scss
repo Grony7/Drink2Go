@@ -49,6 +49,10 @@
   background-color: f.$color-background-first;
 
   font-size: 14px;
+
+  &:disabled {
+    background-color: #e2e2e2;
+  }
 }
 
 .catalog__sort {

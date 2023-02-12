@@ -12,12 +12,10 @@
   min-width: 60px;
   min-height: 60px;
 
+  outline: none;
+
   &:active {
     background-color: #f0ebff;
-
-    -webkit-tap-highlight-color: #f0ebff;
-
-    color: f.$color-text-first;
   }
 }
 

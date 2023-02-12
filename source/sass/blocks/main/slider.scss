@@ -26,8 +26,6 @@
 .slider__connects {
   z-index: 0;
 
-  overflow: hidden;
-
   border-radius: 3px;
 }
 
@@ -72,7 +70,50 @@
   backface-visibility: hidden;
 
   position: absolute;
+
+  outline: none;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    background-color: f.$color-accent;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: 300ms;
+
+    outline: none;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    content: "";
+
+    width: 16px;
+    height: 16px;
+
+    background-color: #7859cf3f;
+  }
+
+  &:active::after {
+    content: "";
+
+    width: 16px;
+    height: 16px;
+
+    background-color: f.$color-accent;
+  }
 }
+
 
 .slider__touch-area {
   width: 100%;
@@ -85,7 +126,7 @@
 }
 
 .slider__horizontal {
-  height: 3px;
+  height: 2px;
 }
 
 .slider__txt-dir-rtl.slider__horizontal .slider__handle {
@@ -95,6 +136,8 @@
 
 .slider__connect {
   background: f.$color-accent--hover;
+  top: -1px;
+  height: 4px;
 }
 
 .slider__draggable {
@@ -206,4 +249,16 @@
   left: auto;
 
   transform: translate(50%, 0);
+}
+
+.slider[disabled],
+.slider[disabled="disabled"]{
+  & .slider__connect {
+    background-color: #bdbdbd;
+  }
+
+  & .slider__handle {
+    border-color: #bdbdbd;
+    pointer-events: none;
+  }
 }

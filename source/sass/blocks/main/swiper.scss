@@ -59,6 +59,14 @@
       fill: f.$color-background-first;
     }
   }
+
+  &:disabled {
+    background-color: #e2e2e2;
+
+    & .swiper__button-icon {
+      fill: f.$color-background-first;
+    }
+  }
 }
 
 .swiper__button-icon {
@@ -133,6 +141,11 @@
     opacity: 1;
     border-radius: 0;
     background-color: f.$color-background-first;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #7859CF3F
+    }
   }
 
   .swiper__pagination-bullet--active {

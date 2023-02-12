@@ -43,11 +43,19 @@
   height: 24px;
   margin-right: 10px;
 
-  transition: 300ms;
-
   border-radius: 12px;
   background-color: #bdbdbd;
+  outline-offset: -2px;
+
+  transition: background-color 300ms;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #7859cf3f;
+    outline: 2px solid f.$color-accent--hover;
+  }
 }
+
 
 .country-origin__label {
   margin: 0;
@@ -55,6 +63,19 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+
+  user-select: none;
+}
+
+.country-origin__input {
+  &:focus-visible + .country-origin__mark {
+    background-color: #7859cf3f;
+    outline: 2px solid f.$color-accent--hover;
+  }
+
+  &:disabled + .country-origin__mark {
+    pointer-events: none;
+  }
 }
 
 .country-origin__input:checked {
@@ -64,6 +85,8 @@
 
   & + .country-origin__mark::after {
     left: 20px;
+
+    transition: left 300ms;
 
     background-color: f.$color-background-first;
   }
@@ -91,6 +114,10 @@
 
   & + .country-origin__mark::after {
     background-color: #f8f8f8;
+  }
+
+  &:checked + .country-origin__mark::after {
+    background-color: #bdbdbd;
   }
 
   & ~ .country-origin__label {

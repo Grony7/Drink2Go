@@ -23,6 +23,12 @@
   border: none;
   background-color: transparent;
 
+  &:active {
+    background-color: #f0ebff;
+
+    -webkit-tap-highlight-color: #f0ebff00;
+  }
+
   @media (min-width: f.$tablet-width) {
     display: none;
   }

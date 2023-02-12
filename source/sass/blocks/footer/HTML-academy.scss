@@ -24,10 +24,29 @@
 
   display: flex;
   flex-wrap: wrap;
+
+  &:hover,
+  &:focus-visible {
+    color: f.$color-accent;
+
+    & .HTML-academy__icon {
+      fill: f.$color-accent;
+    }
+  }
+
+  &:active {
+    color: f.$color-accent--active;
+
+    & .HTML-academy__icon {
+      fill: f.$color-accent--active;
+    }
+  }
 }
 
 .HTML-academy__icon {
   margin-left: 4px;
+
+  fill: #bdbdbd;
 }
 
 @media (min-width: f.$tablet-width) {
