@@ -6,25 +6,28 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  appearance: none;
   appearance: textfield;
 }
 
 .page {
   height: 100%;
+
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
 .page__body {
-  margin: 0;
   display: flex;
   flex-direction: column;
+
   min-width: 320px;
   min-height: 100%;
+  margin: 0;
+
+  color: f.$color-text-first;
+  background-color: f.$color-background-first;
+
   font-size: 24px;
   line-height: 24px;
-  background-color: f.$color-background-first;
-  color: f.$color-text-first
 }
 
 .main-container {
@@ -38,17 +41,22 @@ input::-webkit-inner-spin-button {
 
 .button {
   @include f.link-reset;
-  font-family: "Montserrat", "Arial", sans-serif;
+
   display: block;
-  color: f.$color-background-first;
-  background-color: f.$color-accent;
-  text-align: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+
   padding: 8px 20px;
-  border-radius: 4px;
+
   cursor: pointer;
+  text-align: center;
+
+  color: f.$color-background-first;
   border: none;
+  border-radius: 4px;
   outline: none;
+  background-color: f.$color-accent;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }

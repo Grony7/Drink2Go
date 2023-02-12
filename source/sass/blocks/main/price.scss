@@ -2,50 +2,59 @@
 
 .price {
   @include f.fieldset-reset;
+
   padding-bottom: 24px;
 }
 
 .price__wrapper {
   position: relative;
+
   display: flex;
   justify-content: space-between;
 
   &::after {
-    content: "";
     position: absolute;
-    width: 8px;
-    height: 2px;
     top: 50%;
     right: 50%;
+
+    width: 8px;
+    height: 2px;
+
+    content: "";
     transform: translate(50%, 50%);
+
     background-color: #bdbdbd;
   }
 }
 
 .price__title {
   margin: 0 0 22px;
-  font-weight: 600;
+
   font-size: 16px;
+  font-weight: 600;
   line-height: 24px;
 }
 
 .price__slider-wrapper {
   min-height: 24px;
-  padding: 10px 12px 0;
   margin-bottom: 26px;
+  padding: 10px 12px 0;
 }
 
 .price__input {
   width: 118px;
+  padding: 6px 10px;
+
+  text-align: center;
+
   border: 2px solid #9070ec;
   border-radius: 4px;
   background-color: f.$color-background-first;
-  padding: 6px 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
+
   font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 @media (min-width: f.$tablet-width) {
@@ -66,8 +75,8 @@
 @media (min-width: f.$desktop-width) {
   .price {
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   .price__input {

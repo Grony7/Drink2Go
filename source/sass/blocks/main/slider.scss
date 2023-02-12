@@ -2,44 +2,53 @@
 
 .slider__target,
 .slider__target * {
-  touch-action: none;
-  user-select: none;
   box-sizing: border-box;
+
+  user-select: none;
+  touch-action: none;
 }
 
 .slider__target {
   position: relative;
+
+  background: #e2e2e2;
 }
 
 .slider__base,
 .slider__connects {
-  width: 100%;
-  height: 100%;
   position: relative;
   z-index: 1;
+
+  width: 100%;
+  height: 100%;
 }
 
 .slider__connects {
-  overflow: hidden;
   z-index: 0;
+
+  overflow: hidden;
+
+  border-radius: 3px;
 }
 
 .slider__connect,
 .slider__origin {
-  will-change: transform;
   position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
-  height: 100%;
+
   width: 100%;
+  height: 100%;
+
   transform-origin: 0 0;
+  will-change: transform;
   transform-style: flat;
 }
 
 .slider__txt-dir-rtl.slider__horizontal .slider__origin {
-  left: 0;
   right: auto;
+  left: 0;
 }
 
 .slider__horizontal .slider__origin {
@@ -47,13 +56,27 @@
 }
 
 .slider__handle {
+  top: -11px;
+  right: -12px;
+
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+
+  cursor: grab;
+
+  border: 2px solid f.$color-accent--hover;
+  border-radius: 50%;
+  background-color: f.$color-background-first;
+
   backface-visibility: hidden;
+
   position: absolute;
 }
 
 .slider__touch-area {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .slider__state-tap .slider__connect,
@@ -66,16 +89,8 @@
 }
 
 .slider__txt-dir-rtl.slider__horizontal .slider__handle {
-  left: -17px;
   right: auto;
-}
-
-.slider__target {
-  background: #e2e2e2;
-}
-
-.slider__connects {
-  border-radius: 3px;
+  left: -17px;
 }
 
 .slider__connect {
@@ -86,42 +101,33 @@
   cursor: ew-resize;
 }
 
-.slider__handle {
-  width: 24px;
-  height: 24px;
-  right: -12px;
-  top: -11px;
-  border: 2px solid f.$color-accent--hover;
-  box-sizing: border-box;
-  background-color: f.$color-background-first;
-  border-radius: 50%;
-  cursor: grab;
-}
-
 .slider__pips,
 .slider__pips * {
-  box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .slider__pips {
   position: absolute;
+
   color: #999999;
 }
 
 .slider__value {
   position: absolute;
-  white-space: nowrap;
+
   text-align: center;
+  white-space: nowrap;
 }
 
 .slider__value-sub {
   color: #cccccc;
+
   font-size: 10px;
 }
 
 .slider__marker {
   position: absolute;
+
   background: #cccccc;
 }
 
@@ -134,11 +140,12 @@
 }
 
 .slider__pips-horizontal {
-  padding: 10px 0;
-  height: 80px;
   top: 100%;
   left: 0;
+
   width: 100%;
+  height: 80px;
+  padding: 10px 0;
 }
 
 .slider__value-horizontal {
@@ -150,9 +157,9 @@
 }
 
 .slider__marker-horizontal.slider__marker {
-  margin-left: -1px;
   width: 2px;
   height: 5px;
+  margin-left: -1px;
 }
 
 .slider__marker-horizontal.slider__marker-sub {
@@ -164,32 +171,39 @@
 }
 
 .slider__pips-vertical {
-  padding: 0 10px;
-  height: 100%;
   top: 0;
   left: 100%;
+
+  height: 100%;
+  padding: 0 10px;
 }
 
 .slider__tooltip {
-  display: block;
   position: absolute;
+
+  display: block;
+
+  padding: 5px;
+
+  text-align: center;
+  white-space: nowrap;
+
+  color: #000000;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   background: #ffffff;
-  color: #000000;
-  padding: 5px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .slider__horizontal .slider__tooltip {
-  transform: translate(-50%, 0);
-  left: 50%;
   bottom: 120%;
+  left: 50%;
+
+  transform: translate(-50%, 0);
 }
 
 .slider__horizontal .slider__origin > .slider__tooltip {
-  transform: translate(50%, 0);
-  left: auto;
   bottom: 10px;
+  left: auto;
+
+  transform: translate(50%, 0);
 }

@@ -2,16 +2,20 @@
 
 .social-network {
   @include f.list-reset;
+
   display: flex;
   gap: 20px;
 }
 
 .social-network__button {
   position: relative;
-  padding: 8px;
+
+  display: block;
+
   min-width: 40px;
   min-height: 40px;
-  display: block;
+  padding: 8px;
+
   cursor: pointer;
 }
 
@@ -23,5 +27,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
 }

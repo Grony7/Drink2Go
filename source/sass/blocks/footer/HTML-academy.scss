@@ -9,17 +9,21 @@
 .HTML-academy__wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
   text-align: center;
+
+  color: #bdbdbd;
+
   font-size: 12px;
   line-height: 16px;
-  color: #BDBDBD;
-  justify-content: center;
 }
 
 .HTML-academy__link {
+  @include f.link-reset;
+
   display: flex;
   flex-wrap: wrap;
-  @include f.link-reset;
 }
 
 .HTML-academy__icon {
@@ -29,7 +33,7 @@
 @media (min-width: f.$tablet-width) {
   .HTML-academy {
     width: auto;
-    margin: 0 auto ;
+    margin: 0 auto;
     padding: 0;
   }
 }

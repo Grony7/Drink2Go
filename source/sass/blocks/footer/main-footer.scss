@@ -6,12 +6,13 @@
 
 .main-footer__block-wrapper {
   display: flex;
-  width: f.$mobile-width;
+  align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: f.$mobile-width;
   margin: 0 auto;
   padding: 20px;
-  align-items: center;
-  justify-content: space-between;
 }
 
 
@@ -30,15 +31,17 @@
 .main-footer__dividin-line {
   width: 100%;
   height: 1px;
+
   background-color: #f0ebff;
 }
 
 @media (min-width: f.$tablet-width) {
   .main-footer__wrapper {
+    display: grid;
+
     width: f.$tablet-width;
     margin: 0 auto;
     padding: 40px 20px;
-    display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -48,17 +51,18 @@
   }
 
   .main-footer__block-wrapper {
-    width: auto;
     display: flex;
-    margin: 0;
-    padding: 0;
     align-items: center;
     justify-content: space-between;
+
+    width: auto;
+    margin: 0;
+    padding: 0;
     grid-area: top-wrapper;
   }
 
 
-  .main-footer__logo img{
+  .main-footer__logo img {
     width: 170px;
     height: 36px;
   }
@@ -86,26 +90,28 @@
 
 @media (min-width: f.$desktop-width) {
   .main-footer__wrapper {
-     width: f.$desktop-width;
+    width: f.$desktop-width;
     padding: 40px;
-     grid-template-columns: repeat(4, 1fr);
-     grid-template-areas:
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
       " top-wrapper online-store media contact"
       "html html html html";
-   }
+  }
 
   .main-footer__block-wrapper {
-    flex-direction: column;
     align-items: start;
+    flex-direction: column;
     justify-content: start;
   }
 
   .main-footer__logo-slogan {
     display: block;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+
     margin: 0 0 50px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
   }
 
   .main-footer__logo {

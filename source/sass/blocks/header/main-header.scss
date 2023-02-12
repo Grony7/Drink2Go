@@ -6,16 +6,18 @@
 }
 
 .main-header__wrapper {
-  width: f.$mobile-width;
-  margin: 0 auto;
   display: flex;
-  padding: 0 0 0 22px;
+
+  width: f.$mobile-width;
   min-height: 60px;
+  margin: 0 auto;
+  padding: 0 0 0 22px;
 }
 
 .main-header__logo {
   display: block;
-  padding: 12px 0 0 0;
+
+  padding: 12px 0 0;
 }
 
 .main-header__slogan {
@@ -29,8 +31,8 @@
 @media (min-width: f.$tablet-width) {
   .main-header__wrapper {
     width: f.$tablet-width;
-    padding: 0 20px;
     min-height: 80px;
+    padding: 0 20px;
   }
 
   .main-header__logo {
@@ -38,21 +40,23 @@
 
     & img {
       display: block;
+
       width: 82px;
       height: 36px;
     }
   }
 
   .main-header__main-nav {
-    margin-left: 66px;
     flex-grow: 1;
+
+    margin-left: 66px;
   }
 }
 
 @media (min-width: f.$desktop-width) {
   .main-header__wrapper {
-    padding: 0 40px;
     width: f.$desktop-width;
+    padding: 0 40px;
   }
 
   .main-header__logo img {
@@ -61,11 +65,13 @@
 
   .main-header__slogan {
     display: block;
+
     width: 126px;
     margin-left: 20px;
     padding-top: 24px;
-    font-weight: 400;
+
     font-size: 12px;
+    font-weight: 400;
     line-height: 16px;
   }
 

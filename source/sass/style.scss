@@ -3,11 +3,14 @@
 @import "global/fonts";
 
 /* BLOCKS */
+
+// HEADER
 @import "blocks/header/main-header";
 @import "blocks/header/main-nav";
 @import "blocks/header/user-list";
 @import "blocks/header/site-list";
 
+// MAIN
 @import "blocks/main/swiper";
 @import "blocks/main/best-product";
 @import "blocks/main/advantages";
@@ -21,12 +24,11 @@
 @import "blocks/main/product-card";
 @import "blocks/main/map";
 
+// FOOTER
 @import "blocks/footer/common-footer-classes";
-
 @import "blocks/footer/social-network";
 @import "blocks/footer/online-store";
 @import "blocks/footer/media";
 @import "blocks/footer/contact";
 @import "blocks/footer/HTML-academy";
-
 @import "blocks/footer/main-footer";

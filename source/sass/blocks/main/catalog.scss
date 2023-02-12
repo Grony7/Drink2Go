@@ -6,41 +6,49 @@
 
 .catalog__wrapper {
   width: f.$mobile-width;
-  padding: 50px 20px 44px;
   margin: 0 auto;
+  padding: 50px 20px 44px;
 }
 
 .catalog__title {
   margin: 0 auto 4px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+
   text-align: center;
-  color: f.$color-accent;
   letter-spacing: 0.04em;
+
+  color: f.$color-accent;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
 }
 
 .catalog__subtitle {
   margin: 0 auto 20px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
+
   text-align: center;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
 }
 
 .catalog__button {
+  min-width: 160px;
   margin: 0 auto 24px;
   padding: 10px 14px;
-  min-width: 160px;
+
   font-size: 13px;
   line-height: 24px;
 }
 
 .catalog__button--reset {
-  font-size: 14px;
+  margin-bottom: 40px;
+
   color: f.$color-accent;
   background-color: f.$color-background-first;
-  margin-bottom: 40px;
+
+  font-size: 14px;
 }
 
 .catalog__sort {
@@ -49,16 +57,20 @@
 
 .catalog__list {
   @include f.list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   margin-bottom: 40px;
 }
 
 .catalog__pagination {
   @include f.list-reset;
+
   display: flex;
   gap: 20px;
+
   flex-wrap: wrap;
 }
 
@@ -75,32 +87,37 @@
 }
 
 .catalog__pagination-button {
-  font-family: "Montserrat", "Arial", sans-serif;
-  color: f.$color-accent;
   position: relative;
-  padding: 8px;
+
   min-width: 40px;
   min-height: 40px;
+  padding: 8px;
+
+  cursor: pointer;
   text-align: center;
+
+  color: f.$color-accent;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: f.$color-background-first;
+
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: f.$color-background-first;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  cursor: pointer;
 
   &--current {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
     color: f.$color-text-first;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
   }
 
   &:hover,
   &:focus-visible {
-    background-color: f.$color-accent--hover;
     color: f.$color-background-first;
+    background-color: f.$color-accent--hover;
 
     & .catalog__pagination-button--arrow {
       fill: f.$color-background-first;
@@ -108,8 +125,8 @@
   }
 
   &:active {
-    background-color: f.$color-accent--active;
     color: f.$color-background-first;
+    background-color: f.$color-accent--active;
 
     & .catalog__pagination-button--arrow {
       fill: f.$color-background-first;
@@ -118,8 +135,9 @@
 
   &:disabled {
     pointer-events: none;
-    background-color: f.$color-disabled;
+
     color: f.$color-background-first;
+    background-color: f.$color-disabled;
 
     & .catalog__pagination-button--arrow {
       fill: f.$color-background-first;
@@ -137,8 +155,9 @@
 @media (min-width: f.$tablet-width) {
   .catalog__wrapper {
     width: f.$tablet-width;
-    padding: 80px 20px 90px;
     margin: 0 auto;
+    padding: 80px 20px 90px;
+
     background-color: #f8f8f8;
   }
 
@@ -148,8 +167,8 @@
   }
 
   .catalog__subtitle {
-    font-weight: 700;
     font-size: 42px;
+    font-weight: 700;
     line-height: 64px;
   }
 
@@ -158,26 +177,29 @@
   }
 
   .catalog__button-wrapper {
-    margin: 0 auto 44px 180px;
     display: flex;
     flex-wrap: wrap;
+
+    margin: 0 auto 44px 180px;
     gap: 33px;
   }
 
   .catalog__button {
-    margin: 0;
     min-width: 60px;
+    margin: 0;
     padding: 8px 4px;
+
     font-size: 14px;
     line-height: 24px;
   }
 
   .catalog__list {
+    align-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
-    align-content: space-between;
+
     margin-bottom: 68px;
+    gap: 30px;
   }
 
   .catalog__pagination {
@@ -192,10 +214,12 @@
 
 @media (min-width: f.$desktop-width) {
   .catalog__wrapper {
+    display: grid;
+
     width: f.$desktop-width;
     padding: 100px 40px 120px;
+
     background-color: #f8f8f8;
-    display: grid;
     grid-template-areas:
       "title title "
       "subtitle subtitle"
@@ -213,20 +237,22 @@
 
   .catalog__subtitle {
     grid-area: subtitle;
+
     margin-bottom: 36px;
   }
 
   .catalog__filters {
-    grid-area: filters;
-    margin-bottom: auto;
     flex-direction: column;
+
+    margin-bottom: auto;
+    grid-area: filters;
     gap: 30px;
   }
 
   .catalog__button-wrapper {
-    padding: 10px 0 0;
     width: 100%;
     margin: 0;
+    padding: 10px 0 0;
     gap: 18px;
   }
 
@@ -240,6 +266,7 @@
 
   .catalog__list {
     grid-area: products;
+
     margin-bottom: 60px;
   }
 

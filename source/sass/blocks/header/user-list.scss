@@ -5,16 +5,19 @@
 }
 
 .user-list__button {
+  position: relative;
+
   display: block;
+
   min-width: 60px;
   min-height: 60px;
-  position: relative;
 }
 
 .user-list__icon {
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
 }
 
@@ -43,19 +46,24 @@
 
   .user-list__button {
     @include f.link-reset;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
+
+    padding: 32px 20px 32px 44px;
+
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    padding: 32px 20px 32px 44px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
   }
 
   .user-list__icon {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+
     margin-left: 20px;
+
+    transform: translateY(-50%);
   }
 }

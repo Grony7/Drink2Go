@@ -4,26 +4,33 @@
 @media (max-width: f.$mobile-width-only) {
   .site-list {
     display: flex;
-    width: 100vw;
-    background-color: f.$color-background-first;
     flex-direction: column;
+
+    width: 100vw;
+
     border-top: 1px solid #f0ebff;
+    background-color: f.$color-background-first;
   }
 
   .site-list__button {
     @include f.link-reset;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
+
     display: block;
+
     width: 100%;
     min-height: 57px;
-    border-bottom: 1px solid #f0ebff;
-    background-color: f.$color-background-first;
     padding: 20px;
+
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+
+    border-bottom: 1px solid #f0ebff;
+    background-color: f.$color-background-first;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
   }
 }
 
@@ -35,19 +42,25 @@
 
   .site-list__button {
     @include f.link-reset;
+
     display: block;
+
+    max-width: 400px;
     min-height: 80px;
     padding: 32px 20px;
-    max-width: 400px;
-    color: f.$color-text-first;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    text-transform: uppercase;
+
     letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: f.$color-text-first;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
 
     &--current {
       padding-bottom: 30px;
+
       border-bottom: 2px solid f.$color-accent;
     }
   }
