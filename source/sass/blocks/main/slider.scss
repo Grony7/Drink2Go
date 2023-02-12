@@ -6,9 +6,11 @@
   user-select: none;
   box-sizing: border-box;
 }
+
 .slider__target {
   position: relative;
 }
+
 .slider__base,
 .slider__connects {
   width: 100%;
@@ -21,6 +23,7 @@
   overflow: hidden;
   z-index: 0;
 }
+
 .slider__connect,
 .slider__origin {
   will-change: transform;
@@ -42,14 +45,17 @@
 .slider__horizontal .slider__origin {
   height: 0;
 }
+
 .slider__handle {
   backface-visibility: hidden;
   position: absolute;
 }
+
 .slider__touch-area {
   height: 100%;
   width: 100%;
 }
+
 .slider__state-tap .slider__connect,
 .slider__state-tap .slider__origin {
   transition: transform 0.3s;
@@ -65,11 +71,13 @@
 }
 
 .slider__target {
-  background: #E2E2E2;
+  background: #e2e2e2;
 }
+
 .slider__connects {
   border-radius: 3px;
 }
+
 .slider__connect {
   background: f.$color-accent--hover;
 }
@@ -92,12 +100,13 @@
 
 .slider__pips,
 .slider__pips * {
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .slider__pips {
   position: absolute;
-  color: #999;
+  color: #999999;
 }
 
 .slider__value {
@@ -105,20 +114,23 @@
   white-space: nowrap;
   text-align: center;
 }
+
 .slider__value-sub {
-  color: #ccc;
+  color: #cccccc;
   font-size: 10px;
 }
 
 .slider__marker {
   position: absolute;
-  background: #CCC;
+  background: #cccccc;
 }
+
 .slider__marker-sub {
-  background: #AAA;
+  background: #aaaaaa;
 }
+
 .slider__marker-large {
-  background: #AAA;
+  background: #aaaaaa;
 }
 
 .slider__pips-horizontal {
@@ -128,20 +140,25 @@
   left: 0;
   width: 100%;
 }
+
 .slider__value-horizontal {
   transform: translate(-50%, 50%);
 }
+
 .slider__rtl .slider__value-horizontal {
   transform: translate(50%, 50%);
 }
+
 .slider__marker-horizontal.slider__marker {
   margin-left: -1px;
   width: 2px;
   height: 5px;
 }
+
 .slider__marker-horizontal.slider__marker-sub {
   height: 10px;
 }
+
 .slider__marker-horizontal.slider__marker-large {
   height: 15px;
 }
@@ -156,14 +173,15 @@
 .slider__tooltip {
   display: block;
   position: absolute;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 3px;
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
   padding: 5px;
   text-align: center;
   white-space: nowrap;
 }
+
 .slider__horizontal .slider__tooltip {
   transform: translate(-50%, 0);
   left: 50%;

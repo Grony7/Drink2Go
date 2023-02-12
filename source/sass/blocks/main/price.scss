@@ -18,7 +18,7 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, 50%);
-    background-color: #BDBDBD;
+    background-color: #bdbdbd;
   }
 }
 
@@ -37,7 +37,7 @@
 
 .price__input {
   width: 118px;
-  border: 2px solid #9070EC;
+  border: 2px solid #9070ec;
   border-radius: 4px;
   background-color: f.$color-background-first;
   padding: 6px 10px;
@@ -45,7 +45,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  font-family: "Montserrat","Arial",sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 @media (min-width: f.$tablet-width) {
@@ -74,6 +74,4 @@
     width: 134px;
   }
 }
-
-
 

@@ -1,0 +1,35 @@
+@use "../../global/forwarded.scss" as f;
+
+.media{
+  width: f.$mobile-width;
+  margin: 0 auto;
+  padding: 20px 20px 28px;
+}
+
+.media__item {
+  padding: 0;
+}
+.media__link {
+  @include f.link-reset;
+  margin: 0;
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@media (min-width: f.$tablet-width) {
+  .media {
+    width: auto;
+    margin: 0 ;
+    padding: 0 0 8px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .media {
+    padding: 0;
+  }
+}

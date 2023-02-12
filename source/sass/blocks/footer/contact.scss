@@ -1,0 +1,45 @@
+@use "../../global/forwarded.scss" as f;
+
+.contact {
+  width: f.$mobile-width;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact__list {
+  gap: 16px;
+}
+
+.contact__item {
+  padding: 0;
+}
+
+.contact__link-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.contact__link {
+  @include f.link-reset;
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 19px;
+  font-style: normal;
+}
+
+@media (min-width: f.$tablet-width) {
+  .contact {
+    width: auto;
+    margin: 0 ;
+    padding: 0 0 8px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .contact {
+    padding: 0;
+  }
+}

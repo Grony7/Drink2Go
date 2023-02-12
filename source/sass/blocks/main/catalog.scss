@@ -1,7 +1,7 @@
 @use "../../global/forwarded.scss" as f;
 
 .catalog {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 .catalog__wrapper {
@@ -75,7 +75,7 @@
 }
 
 .catalog__pagination-button {
-  font-family: "Montserrat","Arial",sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   color: f.$color-accent;
   position: relative;
   padding: 8px;
@@ -94,7 +94,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: f.$color-text-first
+    color: f.$color-text-first;
   }
 
   &:hover,
@@ -139,7 +139,7 @@
     width: f.$tablet-width;
     padding: 80px 20px 90px;
     margin: 0 auto;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
   }
 
   .catalog__filters {
@@ -161,7 +161,7 @@
     margin: 0 auto 44px 180px;
     display: flex;
     flex-wrap: wrap;
-    gap: 33px
+    gap: 33px;
   }
 
   .catalog__button {
@@ -194,7 +194,7 @@
   .catalog__wrapper {
     width: f.$desktop-width;
     padding: 100px 40px 120px;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     display: grid;
     grid-template-areas:
       "title title "
@@ -205,7 +205,6 @@
 
     grid-template-columns: 318px auto;
     column-gap: 30px;
-
   }
 
   .catalog__title {
@@ -228,7 +227,7 @@
     padding: 10px 0 0;
     width: 100%;
     margin: 0;
-    gap: 18px
+    gap: 18px;
   }
 
   .catalog__button {
@@ -238,6 +237,7 @@
   .catalog__sort {
     grid-area: sort;
   }
+
   .catalog__list {
     grid-area: products;
     margin-bottom: 60px;
@@ -246,6 +246,4 @@
   .catalog__pagination {
     grid-area: pagination;
   }
-
-
 }

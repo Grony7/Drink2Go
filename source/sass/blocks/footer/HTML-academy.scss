@@ -1,0 +1,35 @@
+@use "../../global/forwarded.scss" as f;
+
+.HTML-academy {
+  width: f.$mobile-width;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.HTML-academy__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: #BDBDBD;
+  justify-content: center;
+}
+
+.HTML-academy__link {
+  display: flex;
+  flex-wrap: wrap;
+  @include f.link-reset;
+}
+
+.HTML-academy__icon {
+  margin-left: 4px;
+}
+
+@media (min-width: f.$tablet-width) {
+  .HTML-academy {
+    width: auto;
+    margin: 0 auto ;
+    padding: 0;
+  }
+}

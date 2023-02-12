@@ -1,0 +1,27 @@
+@use "../../global/forwarded.scss" as f;
+
+.social-network {
+  @include f.list-reset;
+  display: flex;
+  gap: 20px;
+}
+
+.social-network__button {
+  position: relative;
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  display: block;
+  cursor: pointer;
+}
+
+.social-network__item {
+  padding: 0;
+}
+
+.social-network__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -6,8 +6,8 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
+  appearance: none;
+  appearance: textfield;
 }
 
 .page {
@@ -24,6 +24,7 @@ input::-webkit-inner-spin-button {
   font-size: 24px;
   line-height: 24px;
   background-color: f.$color-background-first;
+  color: f.$color-text-first
 }
 
 .main-container {
@@ -37,7 +38,7 @@ input::-webkit-inner-spin-button {
 
 .button {
   @include f.link-reset;
-  font-family: "Montserrat","Arial",sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   display: block;
   color: f.$color-background-first;
   background-color: f.$color-accent;
@@ -51,8 +52,3 @@ input::-webkit-inner-spin-button {
   border: none;
   outline: none;
 }
-
-.pagination button {
-
-}
-

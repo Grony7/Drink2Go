@@ -9,7 +9,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 21px
+  margin: 0 0 21px;
 }
 
 .country-origin__list {
@@ -37,7 +37,7 @@
   width: 42px;
   height: 24px;
   border-radius: 12px;
-  background-color: #BDBDBD;
+  background-color: #bdbdbd;
   transition: 300ms;
 }
 
@@ -73,15 +73,15 @@
 
 .country-origin__input:disabled {
   + .country-origin__mark {
-    background-color: #E2E2E2;
+    background-color: #e2e2e2;
   }
 
   & + .country-origin__mark::after {
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
   }
 
   & ~ .country-origin__label {
-    color: #BDBDBD;
+    color: #bdbdbd;
   }
 }
 

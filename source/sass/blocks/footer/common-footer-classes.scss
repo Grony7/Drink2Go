@@ -1,0 +1,23 @@
+@use "./../../global/forwarded.scss" as f;
+
+.footer-block-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: f.$color-accent;
+  margin: 0 0 20px;
+}
+
+.footer-block-list {
+  @include f.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: f.$desktop-width)  {
+  .footer-block-title {
+    margin-top: 10px
+  }
+}

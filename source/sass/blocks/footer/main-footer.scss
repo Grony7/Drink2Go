@@ -1,0 +1,114 @@
+@use "../../global/forwarded.scss" as f;
+
+.main-footer {
+  background-color: f.$color-background-first;
+}
+
+.main-footer__block-wrapper {
+  display: flex;
+  width: f.$mobile-width;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.main-footer__logo {
+  margin: 0;
+}
+
+.main-footer__logo img {
+  display: block;
+}
+
+.main-footer__logo-slogan {
+  display: none;
+}
+
+.main-footer__dividin-line {
+  width: 100%;
+  height: 1px;
+  background-color: #f0ebff;
+}
+
+@media (min-width: f.$tablet-width) {
+  .main-footer__wrapper {
+    width: f.$tablet-width;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "top-wrapper top-wrapper top-wrapper"
+      "online-store media contact"
+      "html html html";
+  }
+
+  .main-footer__block-wrapper {
+    width: auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: top-wrapper;
+  }
+
+
+  .main-footer__logo img{
+    width: 170px;
+    height: 36px;
+  }
+
+  .main-footer__online-store {
+    grid-area: online-store;
+  }
+
+  .main-footer__media {
+    grid-area: media;
+  }
+
+  .main-footer__contact {
+    grid-area: contact;
+  }
+
+  .main-footer__HTML-academy {
+    grid-area: html;
+  }
+
+  .main-footer__dividin-line {
+    display: none;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .main-footer__wrapper {
+     width: f.$desktop-width;
+    padding: 40px;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-areas:
+      " top-wrapper online-store media contact"
+      "html html html html";
+   }
+
+  .main-footer__block-wrapper {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .main-footer__logo-slogan {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 50px;
+  }
+
+  .main-footer__logo {
+    margin-bottom: 10px;
+  }
+}
