@@ -32,6 +32,15 @@
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
+
+  &:hover,
+  &:focus-visible {
+    color: f.$color-accent--hover;
+  }
+
+  &:active {
+    color: f.$color-accent--active;
+  }
 }
 
 @media (min-width: f.$tablet-width) {

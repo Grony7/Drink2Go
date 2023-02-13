@@ -4,12 +4,20 @@
   width: 100%;
   min-height: 420px;
 
+  background-image: url("../../../img/map/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: left 50% top;;
+
   @media (min-width: f.$tablet-width) {
     min-height: 480px;
+
+    background-image: url("../../../img/map/map-tablet.jpg");
   }
 
   @media (min-width: f.$desktop-width) {
     min-height: 540px;
+
+    background-image: url("../../../img/map/map-desktop.jpg");
   }
 }
 

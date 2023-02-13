@@ -16,7 +16,26 @@
   min-height: 40px;
   padding: 8px;
 
+  border-radius: 4px;
+
   cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #f0ebff;
+
+    & .social-network__icon {
+      fill: f.$color-accent;
+    }
+  }
+
+  &:active {
+    background: #7859cf3f;
+
+    & .social-network__icon {
+      fill: f.$color-accent--active;
+    }
+  }
 }
 
 .social-network__item {
@@ -27,6 +46,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
+
+  fill: #bdbdbd;
 
   transform: translate(-50%, -50%);
 }
