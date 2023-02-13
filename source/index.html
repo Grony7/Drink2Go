@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="vendor/swiper/styles.css">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -79,7 +83,15 @@
           <h3 class="best-product__title">Декаф Флэт Уайт</h3>
           <span class="best-product__tag">Новинка!</span>
           <div class="best-product__image-wrapper">
-            <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт" src="img/best-product/decaf/flat.png" srcset="img/best-product/decaf/flat.png, img/best-product/decaf/flat@2x.png 2x">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/best-product/decaf/flat.webp 1x, img/best-product/decaf/flat@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/best-product/decaf/flat-tablet.webp 1x, img/best-product/decaf/flat-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/best-product/decaf/flat-mob.webp 1x, img/best-product/decaf/flat-mob@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/best-product/decaf/flat.png 1x, img/best-product/decaf/flat@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/best-product/decaf/flat-tablet.png 1x, img/best-product/decaf/flat-tablet@2x.png 2x">
+              <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт" src="img/best-product/decaf/flat-mob.png" srcset="img/best-product/decaf/flat-mob.png 1x, img/best-product/decaf/flat-mob@2x.png 2x">
+            </picture>
           </div>
           <p class="best-product__description">
             Свежесваренный кофе без кофеина из Эфиопии с&nbspнатуральным фермерским молоком — то, что нужно
@@ -106,7 +118,15 @@
           <h3 class="best-product__title">Лавандовый Латте</h3>
           <span class="best-product__tag">Новинка!</span>
           <div class="best-product__image-wrapper">
-            <img class="best-product__image" width="280" height="280" alt="Лавандовый Латте" src="img/best-product/latte/latte.png" srcset="img/best-product/latte/latte.png, img/best-product/latte/latte@2x.png 2x">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/best-product/latte/latte.webp 1x, img/best-product/latte/latte@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/best-product/latte/latte-tablet.webp 1x, img/best-product/latte/latte-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/best-product/latte/latte-mob.webp 1x, img/best-product/latte/latte-mob@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/best-product/latte/latte.png 1x, img/best-product/latte/latte@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/best-product/latte/latte-tablet.png 1x, img/best-product/latte/latte-tablet@2x.png 2x">
+              <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт" src="img/best-product/latte/latte-mob.png" srcset="img/best-product/latte/latte-mob.png 1x, img/best-product/latte/latte-mob@2x.png 2x">
+            </picture>
           </div>
           <p class="best-product__description">
             Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо
@@ -132,7 +152,15 @@
           <h3 class="best-product__title">Тройной Эспрессо</h3>
           <span class="best-product__tag">Новинка!</span>
           <div class="best-product__image-wrapper">
-            <img class="best-product__image" width="280" height="280" alt="Тройной Эспрессо" src="img/best-product/espresso/espresso.png" srcset="img/best-product/espresso/espresso.png, img/best-product/espresso/espresso@2x.png 2x">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/best-product/espresso/espresso.webp 1x, img/best-product/espresso/espresso@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/best-product/espresso/espresso-tablet.webp 1x, img/best-product/espresso/espresso-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/best-product/espresso/espresso-mob.webp 1x, img/best-product/espresso/espresso-mob@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/best-product/espresso/espresso.png 1x, img/best-product/espresso/espresso@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/best-product/espresso/espresso-tablet.png 1x, img/best-product/espresso/espresso-tablet@2x.png 2x">
+              <img class="best-product__image" width="280" height="280" alt="Декаф Флэт Уайт" src="img/best-product/espresso/espresso-mob.png" srcset="img/best-product/espresso/espresso-mob.png 1x, img/best-product/espresso/espresso-mob@2x.png 2x">
+            </picture>
           </div>
           <p class="best-product__description">
             Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое
@@ -154,13 +182,20 @@
       </div>
     </div>
 
-    <button class="swiper__button swiper__button--prev">
+    <button class="swiper__big-button swiper__big-button--prev swiper__button--prev" tabindex="-1">
+      <span class="visually-hidden">Следующий слайд</span>
+    </button>
+    <button class="swiper__big-button swiper__big-button--next swiper__button--next" tabindex="-1">
+      <span class="visually-hidden">Предыдущий слайд</span>
+    </button>
+
+    <button class="swiper__little-button swiper__little-button--prev swiper__button--prev">
       <span class="visually-hidden">Следующий слайд</span>
       <svg class="swiper__button-icon" width="20" height="20">
         <use xlink:href="img/icons/stack.svg#arrow"></use>
       </svg>
     </button>
-    <button class="swiper__button swiper__button--next">
+    <button class="swiper__little-button swiper__little-button--next swiper__button--next">
       <span class="visually-hidden">Предыдущий слайд</span>
       <svg class="swiper__button-icon" width="20" height="20">
         <use xlink:href="img/icons/stack.svg#arrow"></use>
@@ -337,7 +372,11 @@
 
 
         <li class="catalog__item product-card">
-          <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product1/item.png" srcset="img/products/product1/item.png, img/products/product1/item@2x.png 2x">
+          <picture>
+            <source type="image/webp" srcset="img/products/product1/item.webp, img/products/product1/item@2x.webp 2x">
+            <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product1/item.png" srcset="img/products/product1/item.png, img/products/product1/item@2x.png 2x">
+          </picture>
+
           <h3 class="product-card__title">
             Декаф Флэт Уайт
           </h3>
@@ -356,7 +395,10 @@
         </li>
 
         <li class="catalog__item product-card">
-          <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product2/item.png" srcset="img/products/product2/item.png, img/products/product2/item@2x.png 2x">
+          <picture>
+            <source type="image/webp" srcset="img/products/product2/item.webp, img/products/product2/item@2x.webp 2x">
+            <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product2/item.png" srcset="img/products/product2/item.png, img/products/product2/item@2x.png 2x">
+          </picture>
           <h3 class="product-card__title">
             Декаф Флэт Уайт
           </h3>
@@ -375,7 +417,10 @@
         </li>
 
         <li class="catalog__item product-card">
-          <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product3/item.png" srcset="img/products/product3/item.png, img/products/product3/item@2x.png 2x">
+          <picture>
+            <source type="image/webp" srcset="img/products/product3/item.webp, img/products/product3/item@2x.webp 2x">
+            <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product3/item.png" srcset="img/products/product3/item.png, img/products/product3/item@2x.png 2x">
+          </picture>
           <h3 class="product-card__title">
             Декаф Флэт Уайт
           </h3>
@@ -394,7 +439,10 @@
         </li>
 
         <li class="catalog__item product-card">
-          <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product4/item.png" srcset="img/products/product4/item.png, img/products/product4/item@2x.png 2x">
+          <picture>
+            <source type="image/webp" srcset="img/products/product4/item.webp, img/products/product4/item@2x.webp 2x">
+            <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product4/item.png" srcset="img/products/product4/item.png, img/products/product4/item@2x.png 2x">
+          </picture>
           <h3 class="product-card__title">
             Декаф Флэт Уайт
           </h3>
@@ -413,7 +461,10 @@
         </li>
 
         <li class="catalog__item product-card">
-          <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product5/item.png" srcset="img/products/product5/item.png, img/products/product5/item@2x.png 2x">
+          <picture>
+            <source type="image/webp" srcset="img/products/product5/item.webp, img/products/product5/item@2x.webp 2x">
+            <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product5/item.png" srcset="img/products/product5/item.png, img/products/product5/item@2x.png 2x">
+          </picture>
           <h3 class="product-card__title">
             Декаф Флэт Уайт
           </h3>
@@ -432,7 +483,10 @@
         </li>
 
         <li class="catalog__item product-card">
-          <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product6/item.png" srcset="img/products/product6/item.png, img/products/product6/item@2x.png 2x">
+          <picture>
+            <source type="image/webp" srcset="img/products/product6/item.webp, img/products/product6/item@2x.webp 2x">
+            <img class="product-card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="img/products/product6/item.png" srcset="img/products/product6/item.png, img/products/product6/item@2x.png 2x">
+          </picture>
           <h3 class="product-card__title">
             Декаф Флэт Уайт
           </h3>

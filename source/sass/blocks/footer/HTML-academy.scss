@@ -25,6 +25,8 @@
   display: flex;
   flex-wrap: wrap;
 
+  outline: none;
+
   &:hover,
   &:focus-visible {
     color: f.$color-accent;

@@ -19,9 +19,48 @@
   position: relative;
 }
 
-.swiper__button {
+.swiper__big-button {
   position: absolute;
   z-index: 2;
+  top: 0;
+
+  min-width: 20px;
+  min-height: 100%;
+
+  cursor: pointer;
+  transform: translateX(-50%);
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+
+    transform-origin: center;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.swiper__little-button {
+  position: absolute;
+  z-index: 3;
   top: 310px;
 
   min-width: 40px;
@@ -87,7 +126,7 @@
 }
 
 @media (min-width: f.$tablet-width) {
-  .swiper__button {
+  .swiper__little-button {
     top: 300px;
 
     &--prev {
@@ -98,10 +137,14 @@
       left: calc(50% + 344px);
     }
   }
+
+  .swiper__big-button {
+    width: 100px;
+  }
 }
 
 @media (min-width: f.$desktop-width) {
-  .swiper__button {
+  .swiper__little-button {
     top: 336px;
 
     &--prev {
@@ -141,6 +184,8 @@
     opacity: 1;
     border-radius: 0;
     background-color: f.$color-background-first;
+
+    outline: none;
 
     &:hover,
     &:focus-visible {

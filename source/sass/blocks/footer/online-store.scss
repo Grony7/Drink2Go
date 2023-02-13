@@ -24,6 +24,8 @@
   font-weight: 500;
   line-height: 16px;
 
+  outline: none;
+
   &:hover,
   &:focus-visible {
     color: f.$color-accent--hover;

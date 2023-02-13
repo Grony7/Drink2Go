@@ -70,7 +70,7 @@
 .country-origin__input {
   &:focus-visible + .country-origin__mark {
     background-color: f.$color-background--hover;
-    outline: 2px solid f.$color-accent--hover;
+    box-shadow: inset 2px 2px 0 0 f.$color-accent--hover;
   }
 }
 
