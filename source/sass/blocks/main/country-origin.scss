@@ -48,10 +48,12 @@
 
   transition: background-color 300ms;
 
+  outline: none;
+
   &:hover,
   &:focus-visible {
     background-color: f.$color-background--hover;
-    box-shadow: inset 2px 2px 0 0 f.$color-accent--hover;
+    box-shadow: inset 0 0 0 2px f.$color-accent--hover;
   }
 }
 
@@ -69,7 +71,7 @@
 .country-origin__input {
   &:focus-visible + .country-origin__mark {
     background-color: f.$color-background--hover;
-    box-shadow: inset 2px 2px 0 0 f.$color-accent--hover;
+    box-shadow: inset 0 0 0 2px f.$color-accent--hover;
   }
 }
 
