@@ -1,4 +1,4 @@
-@use "../../global/forwarded.scss" as f;
+@use "../../global/forwarded.scss" as f; /* stylelint-disable-line */
 
 .slider__target,
 .slider__target * {
@@ -101,7 +101,7 @@
     width: 16px;
     height: 16px;
 
-    background-color: #7859cf3f;
+    background-color: f.$color-background--hover;
   }
 
   &:active::after {
@@ -252,7 +252,7 @@
 }
 
 .slider[disabled],
-.slider[disabled="disabled"]{
+.slider[disabled="disabled"] {
   & .slider__connect {
     background-color: #bdbdbd;
   }

@@ -1,4 +1,4 @@
-@use "../../global/forwarded.scss" as f;
+@use "../../global/forwarded.scss" as f; /* stylelint-disable-line */
 
 .country-origin {
   @include f.fieldset-reset;
@@ -51,7 +51,7 @@
 
   &:hover,
   &:focus-visible {
-    background-color: #7859cf3f;
+    background-color: f.$color-background--hover;
     outline: 2px solid f.$color-accent--hover;
   }
 }
@@ -69,12 +69,8 @@
 
 .country-origin__input {
   &:focus-visible + .country-origin__mark {
-    background-color: #7859cf3f;
+    background-color: f.$color-background--hover;
     outline: 2px solid f.$color-accent--hover;
-  }
-
-  &:disabled + .country-origin__mark {
-    pointer-events: none;
   }
 }
 
@@ -109,6 +105,7 @@
 
 .country-origin__input:disabled {
   + .country-origin__mark {
+    pointer-events: none;
     background-color: #e2e2e2;
   }
 

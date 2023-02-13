@@ -1,4 +1,4 @@
-@use "../../global/forwarded.scss" as f;
+@use "../../global/forwarded.scss" as f; /* stylelint-disable-line */
 
 .swiper {
   position: relative;
@@ -144,7 +144,7 @@
 
     &:hover,
     &:focus-visible {
-      background-color: #7859CF3F
+      background-color: f.$color-background--hover;
     }
   }
 

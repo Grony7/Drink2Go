@@ -1,4 +1,4 @@
-@use "../../global/forwarded.scss" as f;
+@use "../../global/forwarded.scss" as f; /* stylelint-disable-line */
 
 .availability-milk {
   @include f.fieldset-reset;
@@ -66,17 +66,17 @@
     width: 16px;
     height: 16px;
 
-    background-color: #7859cf3f;
+    background-color: f.$color-background--hover;
   }
 }
 
 .availability-milk__input {
   &:focus + .availability-milk__mark::after,
-  &:focus-visible + .availability-milk__mark::after{
+  &:focus-visible + .availability-milk__mark::after {
     width: 16px;
     height: 16px;
 
-    background-color: #7859cf3f;
+    background-color: f.$color-background--hover;
   }
 
   &:checked + .availability-milk__mark {
@@ -102,7 +102,7 @@
     background-color: #e2e2e2;
   }
 
-  &:disabled ~ .availability-milk__label{
+  &:disabled ~ .availability-milk__label {
     color: #bdbdbd;
   }
 }

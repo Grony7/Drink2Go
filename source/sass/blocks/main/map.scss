@@ -1,4 +1,4 @@
-@use "../../global/forwarded.scss" as f;
+@use "../../global/forwarded.scss" as f; /* stylelint-disable-line */
 
 .map__canvas {
   width: 100%;
@@ -6,7 +6,7 @@
 
   background-image: url("../../../img/map/map-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: left 50% top;;
+  background-position: left 50% top;
 
   @media (min-width: f.$tablet-width) {
     min-height: 480px;

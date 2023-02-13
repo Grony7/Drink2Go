@@ -1,4 +1,4 @@
-@use "../../global/forwarded.scss" as f;
+@use "../../global/forwarded.scss" as f; /* stylelint-disable-line */
 
 .social-network {
   @include f.list-reset;
@@ -30,7 +30,7 @@
   }
 
   &:active {
-    background: #7859cf3f;
+    background: f.$color-background--hover;
 
     & .social-network__icon {
       fill: f.$color-accent--active;
