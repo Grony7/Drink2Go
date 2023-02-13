@@ -7,6 +7,7 @@
   background-image: url("../../img/map/map-mobile.jpg");
   background-repeat: no-repeat;
   background-position: left 50% top;
+  background-size: contain;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/map/map-mobile@2x.jpg");
