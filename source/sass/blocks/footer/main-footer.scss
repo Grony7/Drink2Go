@@ -60,7 +60,6 @@
     grid-template-areas:
       "top-wrapper top-wrapper top-wrapper"
       "online-store media contact"
-      "html html html";
   }
 
   .main-footer__block-wrapper {
@@ -108,7 +107,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       " top-wrapper online-store media contact"
-      "html html html html";
   }
 
   .main-footer__block-wrapper {
